@@ -182,6 +182,20 @@ export const PRODUCTS_QUERY = `
                   amount
                   currencyCode
                 }
+                presentmentPrices(first: 10) {
+                  edges {
+                    node {
+                      compareAtPrice {
+                        amount
+                        currencyCode
+                      }
+                      price {
+                        amount
+                        currencyCode
+                      }
+                    }
+                  }
+                }
                 requiresShipping
                 selectedOptions {
                   name
