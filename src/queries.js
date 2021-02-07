@@ -182,7 +182,7 @@ export const PRODUCTS_QUERY = `
                   amount
                   currencyCode
                 }
-                presentmentPrices(first: 10) {
+                presentmentPrices(first: 250) {
                   edges {
                     node {
                       compareAtPrice {
@@ -250,6 +250,20 @@ export const PRODUCTS_QUERY = `
             maxVariantPrice {
               amount
               currencyCode
+            }
+          }
+          presentmentPriceRanges(first: 250) {
+            edges {
+              node {
+                maxVariantPrice {
+                  amount
+                  currencyCode
+                }
+                minVariantPrice {
+                  amount
+                  currencyCode
+                }
+              }
             }
           }
           productType
